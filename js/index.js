@@ -28,6 +28,9 @@ const displayError = error => {
 
 
 const displySearchResult = docs => {
+    const result = document.getElementById('result');
+    result.innerText = docs.length;
+
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
 
