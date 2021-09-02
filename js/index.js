@@ -4,15 +4,15 @@ const searchBook = () => {
     const searchText = searchField.value;
 
     // clear data 
-    // searchResult.textContent = '';
     searchField.value = '';
     document.getElementById('error-message').style.display = 'none';
-    if (searchText === '') {
-        // please write something to display
-        displayError();
-        console.log('error')
 
+    if (searchText === '') {
+        displayError();
     }
+
+
+
     else {
         // load data 
         const url = ` https://openlibrary.org/search.json?q=${searchText}`
@@ -34,13 +34,10 @@ const displySearchResult = docs => {
     searchResult.textContent = '';
 
     if (docs.length === 0) {
-        // show no result found;
-        console.log('error3')
         displayError()
     }
 
     docs.forEach(doc => {
-        console.log(doc)
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
@@ -58,4 +55,8 @@ const displySearchResult = docs => {
 
 
     })
+
+
+
 }
+
