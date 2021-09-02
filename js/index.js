@@ -11,8 +11,6 @@ const searchBook = () => {
 
     }
 
-
-
     else {
         // load data 
         const url = ` https://openlibrary.org/search.json?q=${searchText}`
@@ -35,6 +33,7 @@ const displySearchResult = docs => {
 
     if (docs.length === 0) {
         displayError()
+        console.log('eroor2')
     }
 
     docs.forEach(doc => {
