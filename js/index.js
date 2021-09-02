@@ -8,7 +8,7 @@ const searchBook = () => {
     document.getElementById('error-message').style.display = 'none';
 
     if (searchText === '') {
-        displayError();
+
     }
 
 
